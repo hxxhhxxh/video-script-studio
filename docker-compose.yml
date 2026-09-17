@@ -1,0 +1,25 @@
+services:
+  vscript:
+    build: .
+    image: vscript-studio:latest
+    container_name: vscript-studio
+    restart: unless-stopped
+    ports:
+      - "8790:8790"
+    volumes:
+      - vscript-data:/data
+      - vscript-runs:/app/runs
+    environment:
+      # 对外暴露务必设口令（本机文件 .access-token.txt）
+      VSS_ACCESS_TOKEN: "${VSS_ACCESS_TOKEN:?请先设置访问口令}"
+      # 想用云端大模型就填这三行，速度从几分钟降到几十秒
+      # VSS_LLM_BASE_URL: "https://api.deepseek.com/v1"
+      # VSS_LLM_API_KEY: "sk-xxx"
+      # VSS_LLM_CLOUD_MODEL: "deepseek-chat"
+      VSS_WHISPER: "small"
+      HF_ENDPOINT: "https://hf-mirror.com"
+      HF_HUB_DISABLE_XET: "1"
+
+volumes:
+  vscript-data:
+  vscript-runs:

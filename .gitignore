@@ -1,0 +1,9 @@
+# 口令、模型、产物、下载的二进制一律不进仓库
+.access-token.txt
+.env
+models/
+runs/
+bin/
+__pycache__/
+*.pyc
+.cowork-temp/

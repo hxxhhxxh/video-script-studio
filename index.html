@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>视频改写剧本工作台</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%232a1d17'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='%23b4893a' font-family='Georgia'%3EV%3C/text%3E%3C/svg%3E">
+<style>
+  body{margin:0;background:#f6f4ef;color:#1d1b18;font:16px/1.8 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+       display:grid;place-items:center;min-height:100vh}
+  .box{background:#fff;border:1px solid #e3ded3;border-radius:14px;padding:28px 32px;max-width:560px;
+       box-shadow:0 1px 2px rgba(29,27,24,.06),0 8px 24px rgba(29,27,24,.05)}
+  h1{margin:0 0 6px;font-size:20px}
+  p{margin:8px 0;font-size:14px;color:#4a463f}
+  a{color:#a8341f}
+  code{background:#f2ede2;padding:1px 6px;border-radius:5px;font-size:13px}
+</style>
+</head>
+<body>
+<div class="box">
+  <h1>视频链接 → 改写剧本 · 人物画像 · 分镜提示词</h1>
+  <p>本仓库是前端页面。计算部分（语音识别、视频下载、大模型）跑在本机上，需要在「后端设置」里填入后端地址与访问口令。</p>
+  <p><a href="static/index.html">进入工作台 →</a></p>
+  <p style="font-size:12.5px;color:#857f74">本机运行时直接访问 <code>http://127.0.0.1:8790</code>，无需任何设置。</p>
+</div>
+<script>
+  // 直接跳进工作台
+  location.replace('static/index.html');
+</script>
+</body>
+</html>
