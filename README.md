@@ -4,6 +4,31 @@
 
 全程本地跑，不需要任何 API key。
 
+## 两种用法
+
+### 一、本机直用（最简单）
+
+浏览器打开 <http://127.0.0.1:8790>，不需要任何设置。
+
+### 二、公网前端 + 本机后端（GitHub Pages）
+
+前端页面挂在 GitHub Pages 上，网址永久且固定，计算仍在你电脑上跑：
+
+1. 打开 <https://hxxhhxxh.github.io/video-script-studio/>
+2. 展开页面上部的「后端设置」
+3. 后端地址填你的后端域名（例如 `https://xxxxx.ts.net`），口令填后端 `.access-token.txt` 里的值
+4. 点保存，之后浏览器会记住
+
+也可以直接用带参数的链接跳过第一次配置：
+
+```
+https://hxxhhxxh.github.io/video-script-studio/static/index.html?backend=https://你的后端域名
+```
+
+口令仍需手动填一次（不会写进网页，也不会进仓库）。
+
+**注意**：这种模式依赖你电脑开机；电脑关了就访问不了。要彻底不依赖电脑，看“部署到服务器.md”。
+
 ## 启动
 
 ```powershell
